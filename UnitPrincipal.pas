@@ -15,8 +15,8 @@ type
     Label2: TLabel;
     Label3: TLabel;
     Calcular: TButton;
-    Label4: TLabel;
     Label5: TLabel;
+    comboChoose: TComboBox;
     procedure CalcularClick(Sender: TObject);
   private
     { Private declarations }
@@ -32,20 +32,27 @@ implementation
 {$R *.dfm}
 
 procedure TForm1.CalcularClick(Sender: TObject);
-//Atribuindo váriaveis e valores
+
 var
-  numero1: Real;
-  numero2: Real;
-  resultado: Real;
+  numero1, numero2, resultado: Real;
 begin
-  //Falando o que cada váriavel pertence e mudando o valor de string para float
   numero1 := StrToFloat(txtNumero1.Text);
   numero2 := StrToFloat(txtNumero2.Text);
 
-  resultado := numero1 + numero2;
+  if comboChoose.Text = '+' then
+    resultado := numero1 + numero2
 
-  //Colocando o resultado no campo de resultado
-  txtResultado.Text := FloatToStr(resultado);
+  else if comboChoose.Text = '-' then
+    resultado := numero1 - numero2
+
+  else if comboChoose.Text = 'X' then
+    resultado := numero1 * numero2
+
+  else if comboChoose.Text = '÷' then
+    resultado := numero1 / numero2;
+
+
+    txtResultado.Text := FloatToStr(resultado);
 end;
 
 end.

@@ -12,42 +12,29 @@ object Form1: TForm1
   Font.Style = []
   TextHeight = 15
   object Label1: TLabel
-    Left = 80
-    Top = 72
+    Left = 176
+    Top = 64
     Width = 53
     Height = 15
     Caption = 'Numero 1'
   end
   object Label2: TLabel
-    Left = 256
-    Top = 72
+    Left = 320
+    Top = 64
     Width = 53
     Height = 15
     Caption = 'Numero 2'
   end
   object Label3: TLabel
-    Left = 424
-    Top = 72
+    Left = 488
+    Top = 64
     Width = 52
     Height = 15
     Caption = 'Resultado'
   end
-  object Label4: TLabel
-    Left = 219
-    Top = 85
-    Width = 17
-    Height = 32
-    Caption = '+'
-    Font.Charset = DEFAULT_CHARSET
-    Font.Color = clWindowText
-    Font.Height = -24
-    Font.Name = 'Segoe UI'
-    Font.Style = [fsBold]
-    ParentFont = False
-  end
   object Label5: TLabel
-    Left = 392
-    Top = 86
+    Left = 456
+    Top = 78
     Width = 17
     Height = 32
     Caption = '='
@@ -59,22 +46,22 @@ object Form1: TForm1
     ParentFont = False
   end
   object txtNumero1: TEdit
-    Left = 80
-    Top = 93
+    Left = 176
+    Top = 85
     Width = 121
     Height = 23
     TabOrder = 0
   end
   object txtNumero2: TEdit
-    Left = 256
-    Top = 93
+    Left = 320
+    Top = 85
     Width = 121
     Height = 23
     TabOrder = 1
   end
   object txtResultado: TEdit
-    Left = 424
-    Top = 93
+    Left = 488
+    Top = 85
     Width = 121
     Height = 23
     Enabled = False
@@ -88,5 +75,19 @@ object Form1: TForm1
     Caption = 'Calcular'
     TabOrder = 3
     OnClick = CalcularClick
+  end
+  object comboChoose: TComboBox
+    Left = 8
+    Top = 85
+    Width = 145
+    Height = 23
+    ItemIndex = 0
+    TabOrder = 4
+    Text = '+'
+    Items.Strings = (
+      '+'
+      '-'
+      'X'
+      #247)
   end
 end
